@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tienda de Café</title>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"> ENTRE TAZAS ☕</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Productos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<button id="btnCarrito" class="btn btn-warning position-fixed top-0 end-0 m-3">
+     <span id="contador">0</span>
+</button>
+
+<div id="carrito">
+    <h2>Carrito</h2>
+    <div id="listaCarrito"></div>
+    <h3 id="total">Total: $0</h3>
+</div>
+
+
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+        <div class="carousel-item active">
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" class="d-block w-100" height="400">
+        </div>
+
+        <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348" class="d-block w-100" height="400">
+        </div>
+
+        <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096" class="d-block w-100" height="400">
+        </div>
+
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+</div>
+
+
+<section class="container mt-5">
+    <div class="row">
+
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Café Colombiano</h5>
+                    <p>$20000</p>
+                    <button class="btn btn-success" onclick="agregarCarrito('Café Colombiano', 20000)">Agregar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348" class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Café Espresso</h5>
+                    <p>$25000</p>
+                    <button class="btn btn-success" onclick="agregarCarrito('Café Espresso', 25000)">Agregar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096" class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Café Orgánico</h5>
+                    <p>$30000</p>
+                    <button class="btn btn-success" onclick="agregarCarrito('Café Orgánico', 30000)">Agregar</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer class="bg-dark text-white text-center p-3 mt-5">
+    © 2026 Tienda de Café
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
